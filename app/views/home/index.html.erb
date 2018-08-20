@@ -1,0 +1,114 @@
+<!-- 메인페이지 -->
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <title> 다 행 </title>
+        
+       
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    
+        <!-- Custom fonts for this template -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    
+        <!-- Custom styles for this template -->
+        <link href="css/grayscale.css" rel="stylesheet">
+        
+        <style type="text/css">
+            body {background-image: url("img/sea1.jpg");}
+            #about {background-color: white;}
+            #logo {height: 80px; width: 135px;}
+            .bu {
+              border: none;
+              height: 200px; width: 200px;
+              background-clip: padding-box; 
+              border: 20px solid rgba(255, 255, 255, 0.4);
+              text-align: center;
+              font-size: 15px;
+              font-weight: bold;
+              }
+            #bu1 {background-image: url("img/lang.jpg"); background-size: contain; opacity: 0.8}
+            #bu2 {background-image: url("img/volun.jpg"); background-size: contain; opacity: 0.8}
+            #bu3 {background-image: url("img/trav.jpg"); background-size: contain; opacity: 0.8}
+            .bu:hover {border: 20px solid rgba(255, 255, 255, 0.8);}
+          
+        </style>
+    </head>
+    
+    <body id="page-top">
+        
+        
+        <li class="nav-item">
+                      <%if user_signed_in?%>
+                        <%=current_user.email%>
+                        <%=link_to '로그아웃',destroy_user_session_path,method: 'delete'%>
+                      <%else%>
+                        <%=link_to '로그인',new_user_session_path%>
+                        <%=link_to '회원가입',new_user_registration_path %>
+                      <%end%>
+                    </li>
+        <!-- Header -->
+        <header class="masthead">
+          <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+              <br>
+              <h1 class="mx-auto my-0 text-uppercase">다음에도<br>행복하게</h1>
+              <h2 class="text-white-50 mx-auto mt-2 mb-5">당신의 안전한 여행을 위한 특별한 플렛폼<br>다음에도 행복하게, <span style="color: #165396">다행</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+              <br>
+              <button OnClick=" location.href='/home/lang' " class="bu" id="bu1">교환학생/어학연수</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button OnClick=" location.href='/home/vol' "class="bu" id="bu2">해외봉사</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button OnClick=" location.href='/home/trav' "class="bu" id="bu3">여행</button>
+              
+              
+              <br><br><br><br><br>
+            </div>
+          </div>
+        </header>
+        
+        <!-- About Section -->
+        <section id="about" class="about-section text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <h2 style="color: black"><strong><span style="color:#93C8CC">다행</span>이란?</strong></h2><br><br>
+                <p style="color: black"> 당신의 여행은 기분 좋은 추억으로 남아있나요?<br>
+                다음 여행할 곳을 걱정한 적이 있나요?<br>
+                안전한 여행지를 추천하고, 추천받고 싶나요?<br><br>
+                당신의 여행이 이번에도, 다음에도 행복할 수 있도록<br>
+                특별한 안전여행 플랫폼, <strong style="color:#93C8CC">다 행</strong>
+                <br><br><br><br><br><br>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black small text-center text-white-50">
+            <div class="container">
+                Copyright &copy; 다행 DaHaeng 2018
+            </div>
+        </footer>
+  
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.js"></script>
+    
+        <!-- Custom scripts for this template -->
+        <script src="js/grayscale.js"></script>
+        
+        
+    </body>
+</html>

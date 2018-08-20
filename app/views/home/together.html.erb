@@ -1,0 +1,32 @@
+    <html>
+        <head>
+            <style type ="text/css">
+                body {background-image: url("img/bk.jpg");}
+                #submit {text-align: center;}
+                
+            </style>
+        </head>
+     
+<body>
+
+<br><br>
+<form action="/homes/create" method="post" enctype="multipart/form-data">
+    <%=hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <center>
+        <h1 class="title">제목</h1>
+        <textarea name="post_title" rows="2" cols="100" class="form-control2" id="exampleFormControlTextarea1"> </textarea><br><br>
+        <h1 class="title">날짜</h1>
+        <textarea name="post_date" rows="2" cols="100" class="form-control2" id="exampleFormControlTextarea1"> </textarea><br><br>
+        <h1 class="title">내용</h1>
+        <textarea name="post_content" rows="20" cols="100" class="form-control3" id="exampleFormControlTextarea1"></textarea><br><br>
+        </center>
+        
+        <div id="submit">
+        <input type='submit' class="submit_btn" value='제출'>
+        </div>
+      
+</form>
+
+</body>
+
+</html>

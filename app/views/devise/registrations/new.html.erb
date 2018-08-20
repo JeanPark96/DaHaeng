@@ -1,0 +1,99 @@
+<style type= "text/css">
+  body{text-align: center;}
+  button{
+  height:100%;
+}
+uttbuttonn{
+  text-align:center;
+}
+uttbuttonn:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  background:#00BFFF;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:30px;
+  font-size:1.0em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#00BFFF;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #00BFFF;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+</style>
+
+<h2>회원가입</h2>
+
+<body>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="field">
+    <%=f.label :name,"이름"%><br/>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name",:placeholder => 'ex)홍길동'%><br><br>
+  </div>
+  <div class="field">
+    <%=f.label :useridentifier,"아이디"%><br/>
+    <%= f.text_field :useridentifier,:placeholder => '영어, 숫자 최소 4자'%><br><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :password,'비밀번호' %></br>
+    <%= f.password_field :password, :placeholder => '최소 6자' %><br><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation,'비밀번호 확인' %><br />
+    <%= f.password_field :password_confirmation, :placeholder => '최소 6자' %><br><br>
+  </div>
+  
+  <div class="field">
+    <%= f.label :email,'이메일' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",:placeholder => 'ex)abcd@naver.com' %><br><br>
+  </div>
+  <div class="field">
+    <%= f.label :gender,'성별' %><br />
+    <%=f.radio_button :gender, 'female'%>
+    <%=f.label :gender_female, "여자"%>
+    <%=f.radio_button :gender, 'male'%>
+    <%=f.label :gender_male, "남자"%><br><br>
+  </div>
+  <div class="field">
+    <%= f.label :birthday,'생일' %><br/>
+    <%= f.text_field :birthday, :placeholder => 'ex)19961008'%><br><br>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+    <button><a href="/">Cancel</button></a>
+    </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</body>
