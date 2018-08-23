@@ -1,0 +1,38 @@
+    <html>
+      <head>
+            <style type ="text/css">
+                
+     </style>
+     </head>
+    
+    </div>
+    
+    
+<%= link_to 'New Review', reviews_review_new_path %>
+
+    <table>
+  <tr>
+    <th>Title</th>
+ 
+    <th>Content</th>
+    <th>Date</th>
+    <th>Author</th>
+    <th>Score</th>
+  </tr>
+ 
+  <% @reviews.each do |review| %>
+    <tr>
+      
+      <td><%= review.title %></td>
+
+      <td><%= review.content%></td>
+      <td><%= review.date%></td>
+      <td><%= review.author%></td>
+      <td><%= review.score %></td>
+      
+    </tr>
+  <% end %>
+</table>
+
+
+

@@ -1,0 +1,106 @@
+      <html>
+      <head>
+            <style type ="text/css">
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background-color: pink;
+                }
+                
+                li {
+                    float: left;
+                }
+                
+                li a, .dropbtn {
+                    display: inline-block;
+                    color: black;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+                
+                li a:hover, .dropdown:hover .dropbtn {
+                    background-color: white;
+                }
+                
+                li.dropdown {
+                    display: inline-block;
+                }
+                
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color:#f9f9f9;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                }
+                
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    text-align: left;
+                }
+                
+                .dropdown-content a:hover {background-color:#FFFFFF}
+                
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+     </style>
+     </head>
+     <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/home/safety">Safety</a></li>
+  <li><a href="/home/together">Together</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Review</a>
+    <div class="dropdown-content">
+      <a href="/home/review_new">리뷰 쓰기</a>
+      <a href="#">유의사항</a>
+    </div>
+    </ul>
+<center><br> 여행 별점 매기기<br><br> 
+  <%=form_for :review, url: {:action=>"create"} do |f| %> 
+ 
+      
+         <p>
+            <fieldset class = "score_new">
+                <legend>Please rate:</legend>
+                <%=f.radio_button :score, 1, :score_id => "score_one"%><label for ="score_one", title="1점">1점</label>                                                                                                                
+                <%=f.radio_button :score, 2, :score_id => "score_two"%><label for ="score_two", title="2점">2점</label>
+                <%=f.radio_button :score, 3, :score_id => "score_three"%><label for ="score_three", title="3점">3점</label>
+                <%=f.radio_button :score, 4, :score_id => "score_four"%><label for ="score_four", title="4점">4점</label>
+                <%=f.radio_button :score, 5, :score_id => "score_five"%><label for ="score_five", title="5점">5점</label>
+            </fieldset>     
+        </p>
+         
+         <p>
+            <%=f.label :title,"제목"%><br/>
+            <%= f.text_field :title, autofocus: true, autocomplete: "title",:placeholder => '제목'%><br><br>
+         </p>
+         <p>
+            <%=f.label :content,"내용"%><br/>
+            <%= f.text_field :content, autofocus: true, autocomplete: "content",:placeholder => '내용'%><br><br>
+         </p>
+        <div class="field">
+            <%=f.label :date,"날짜"%><br/>
+            <%= f.date_field :date%><br><br>
+         </div>
+        <div class="field">
+            <%=f.label :author,"작성자"%><br/>
+            <%= f.text_field :author, autofocus: true, autocomplete: "author",:placeholder => '작성자'%><br><br> 
+        </div>
+        <div class="actions">
+            <%= f.submit "OK", class: 'button' %>
+            <button id=1><a href="/">Cancel</button></a>
+            </div>
+    <% end %>
+
+</center>
+
+ 

@@ -22,13 +22,13 @@ ActiveRecord::Schema.define(version: 20180813113552) do
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
   create_table "reviews", force: :cascade do |t|
-    t.integer  "score",                   null: false
-    t.string   "title",      default: "", null: false
-    t.string   "content",    default: "", null: false
-    t.datetime "date",                    null: false
-    t.string   "author",     default: "", null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.integer  "score"
+    t.string   "title"
+    t.string   "content"
+    t.datetime "date"
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

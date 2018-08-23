@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'activeresource'
 gem 'rest-client'
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

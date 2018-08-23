@@ -6,7 +6,6 @@ class CreateReviews < ActiveRecord::Migration
       t.string :content
       t.datetime :date
       t.string :author
-
       t.timestamps null: false
     end
   end

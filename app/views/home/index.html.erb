@@ -39,13 +39,12 @@
             #bu2 {background-image: url("img/volun.jpg"); background-size: contain; opacity: 0.8}
             #bu3 {background-image: url("img/trav.jpg"); background-size: contain; opacity: 0.8}
             .bu:hover {border: 20px solid rgba(255, 255, 255, 0.8);}
-          
+         
         </style>
     </head>
     
     <body id="page-top">
-        
-        
+
         <li class="nav-item">
                       <%if user_signed_in?%>
                         <%=current_user.email%>
@@ -54,14 +53,14 @@
                         <%=link_to '로그인',new_user_session_path%>
                         <%=link_to '회원가입',new_user_registration_path %>
                       <%end%>
-                    </li>
+        </li>
         <!-- Header -->
         <header class="masthead">
           <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center">
               <br>
               <h1 class="mx-auto my-0 text-uppercase">다음에도<br>행복하게</h1>
-              <h2 class="text-white-50 mx-auto mt-2 mb-5">당신의 안전한 여행을 위한 특별한 플렛폼<br>다음에도 행복하게, <span style="color: #165396">다행</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+              <h2 class="text-white-50 mx-auto mt-2 mb-5">당신의 안전한 여행을 위한 특별한 플렛폼<br><br>다음에도 행복하게, <span style="color: #165396">다행</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
               <br>
               <button OnClick=" location.href='/home/lang' " class="bu" id="bu1">교환학생/어학연수</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button OnClick=" location.href='/home/vol' "class="bu" id="bu2">해외봉사</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -94,7 +93,11 @@
         <!-- Footer -->
         <footer class="bg-black small text-center text-white-50">
             <div class="container">
-                Copyright &copy; 다행 DaHaeng 2018
+                Copyright &copy; 다행 DaHaeng 2018<br>
+                상호명 다행 DaHaeng │ 대표 구본정 이시연 박혜리 정지윤│ 서울특별시 용산구 청파로47길 66(다행 DaHaeng)|
+                대표번호 010-1234-5678<br> 
+                다행은 안전한 여행을 위한 정보제공자이며 통신판매의 당사자가 아닙니다.<br>
+                따라서 다행은 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.
             </div>
         </footer>
   

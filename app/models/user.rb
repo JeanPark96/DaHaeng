@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
          
   after_create :create_profile
   has_one :profile
+  has_many :review
 
 end

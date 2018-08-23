@@ -1,55 +1,21 @@
 <style type= "text/css">
   body{text-align: center;}
-  button{
-  height:100%;
-}
-uttbuttonn{
-  text-align:center;
-}
-uttbuttonn:before{
-  content:'';
-  height:100%;
-  display:inline-block;
-  vertical-align:middle;
-}
-button{
-  background:#00BFFF;
-  color:#fff;
-  border:none;
-  position:relative;
-  height:30px;
-  font-size:1.0em;
-  padding:0 2em;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
-}
-button:hover{
-  background:#fff;
-  color:#00BFFF;
-}
-button:before,button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #00BFFF;
-  transition:400ms ease all;
-}
-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-button:hover:before,button:hover:after{
-  width:100%;
-  transition:800ms ease all;
-</style>
 
-<h2>회원가입</h2>
+.signin {
+  margin-right: 500px;
+  margin-left: 500px;
+  padding: 20px;
+  background-color: white;
+  opacity: 0.8;
+}
+body {
+  background-color: DodgerBlue;
+  background-size: cover;
+}
+
+</style>
+<div class="signin">
+  <h2>회원가입</h2>
 
 <body>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -89,11 +55,14 @@ button:hover:before,button:hover:after{
     <%= f.text_field :birthday, :placeholder => 'ex)19961008'%><br><br>
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
-    <button><a href="/">Cancel</button></a>
+    <span id="submitbutton"><%= f.submit "Sign up" %></span>
+    <button><a href="/" id="cancelbutton">Cancel</a></button>
     </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+
+<%= stylesheet_link_tag "main" %>
 
 </body>
