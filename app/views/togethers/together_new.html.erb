@@ -1,0 +1,44 @@
+    <html>
+        <head>
+            <style type ="text/css">
+                body {background-image: url("img/bk.jpg");}
+                #submit {text-align: center;}
+                
+            </style>
+        </head>
+     
+<body>
+
+<br><br>
+
+
+<center><h1><br><strong>동행</strong><br><br></h1> 
+  <%=form_for :together, url: {:action=>"create"} do |f| %> 
+ 
+          
+         
+        <p>
+            <%=f.label :title2,"제목"%><br/><br>
+            <%= f.text_field :title2, autofocus: true, autocomplete: "title",:placeholder => '제목'%><br><br>
+        </p>
+        <p>
+        <div class="field">
+            <%=f.label :date2,"날짜"%><br/><br>
+            <%= f.date_field :date2%><br><br>
+        </div>
+        <p>
+            <%=f.label :content2,"내용"%><br/><br>
+            <%= f.text_field :content2, autofocus: true, autocomplete: "content",:placeholder => '내용'%><br><br>
+        </p>
+       
+        <div class="actions">
+            <%= f.submit "OK", class: 'button' %>
+            <button id=1><a href="/">Cancel</button></a>
+            </div>
+    <% end %>
+
+</center>
+
+</body>
+
+</html>

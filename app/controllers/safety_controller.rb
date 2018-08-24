@@ -1,0 +1,2 @@
+class SafetyController < ApplicationController
+end

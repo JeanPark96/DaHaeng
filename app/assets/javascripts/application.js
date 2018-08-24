@@ -10,7 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require Chart.bundle
+//= require chartkick
+
+//= require chartkick
+//= require Chart.bundle
+//= require jsapi
+//= require chartkick
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+//<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>

@@ -1,1 +1,4 @@
 해외봉사
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+<%=column_chart Vol.group(:country).maximum(:visit) %>
+<%=pie_chart Vol.group(:country).maximum(:score) %>

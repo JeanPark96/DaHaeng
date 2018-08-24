@@ -1,68 +1,96 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Poiret+One|Poor+Story" rel="stylesheet">
+
 <style type= "text/css">
-  body{text-align: center;}
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+  body{text-align: center;
+font-family: 'Poiret One', 'Poor Story', 'Hanna', '나눔고딕';
+
+
+  }
 
 .signin {
   margin-right: 500px;
   margin-left: 500px;
   padding: 20px;
-  background-color: white;
-  opacity: 0.8;
+  padding-top: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+
 }
 body {
-  background-color: DodgerBlue;
+  background-image: url("/img/blur5.gif");
   background-size: cover;
+}
+h1 {text-align:center;
+color: snow;
+letter-spacing: 10px;
+text-shadow: 0 0 5px rgba(255, 255, 255, 1) , 
+            0 0 10px rgba(255, 255, 255, 1) , 
+            0 0 0px #ffffff , 0 0 0px #ffffff , 
+            0 0 0px #ffffff , 0 0 0px #ffffff;
+  font-size: 40px;
+}
+#cancelbutton {
+  border: none; background-color: #3186b2; border-radius: 3px; opacity: 0.5; padding: 7px;
+  color: LightSteelBlue;
+  text-decoration:none;
+  font-size: 15px;
+  
 }
 
 </style>
-<div class="signin">
-  <h2>회원가입</h2>
+</head>
 
 <body>
+  <div class="signin">
+  <h1>SIGN IN</h1>
+  <hr><br>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   <div class="field">
-    <%=f.label :name,"이름"%><br/>
-    <%= f.text_field :name, autofocus: true, autocomplete: "name",:placeholder => 'ex)홍길동'%><br><br>
+    <%=f.label :name,"Name", style: "color: LightSteelBlue"%><br/>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name",:placeholder => 'ex)홍길동', style: "border: 1px solid white; background-color: white; opacity: 0.5; font-family:'Poiret One', 'Poor Story', cursive; font-size: 16px; padding: 4px; width: 220px; text-align: center; letter-spacing: 5px;"%><br><br>
   </div>
   <div class="field">
-    <%=f.label :useridentifier,"아이디"%><br/>
-    <%= f.text_field :useridentifier,:placeholder => '영어, 숫자 최소 4자'%><br><br>
-  </div>
-
-  <div class="field">
-    <%= f.label :password,'비밀번호' %></br>
-    <%= f.password_field :password, :placeholder => '최소 6자' %><br><br>
+    <%=f.label :useridentifier,"Id", style: "color: LightSteelBlue"%><br/>
+    <%= f.text_field :useridentifier,:placeholder => '영어, 숫자 최소 4자', style: "border: 1px solid white; background-color: white; opacity: 0.5; font-family:'Poiret One', 'Poor Story', cursive; font-size: 16px; padding: 4px; width: 220px; text-align: center; letter-spacing: 5px;" %><br><br>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation,'비밀번호 확인' %><br />
-    <%= f.password_field :password_confirmation, :placeholder => '최소 6자' %><br><br>
+    <%= f.label :password,'Password', style: "color: LightSteelBlue" %></br>
+    <%= f.password_field :password, :placeholder => '최소 6자', style: "border: 1px solid white; background-color: white; opacity: 0.5; font-family:'Poiret One', 'Poor Story', cursive; font-size: 16px; padding: 4px; width: 220px; text-align: center; letter-spacing: 5px;" %><br><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation,'Confirm Password', style: "color: LightSteelBlue" %><br />
+    <%= f.password_field :password_confirmation, :placeholder => '최소 6자', style: "border: 1px solid white; background-color: white; opacity: 0.5; font-family:'Poiret One', 'Poor Story', cursive; font-size: 16px; padding: 4px; width: 220px; text-align: center; letter-spacing: 5px;" %><br><br>
   </div>
   
   <div class="field">
-    <%= f.label :email,'이메일' %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",:placeholder => 'ex)abcd@naver.com' %><br><br>
+    <%= f.label :email,'Email', style: "color: LightSteelBlue" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",:placeholder => 'ex)abcd@naver.com', style: "border: 1px solid white; background-color: white; opacity: 0.5; font-family:'Poiret One', 'Poor Story', cursive; font-size: 16px; padding: 4px; width: 220px; text-align: center; letter-spacing: 5px;" %><br><br>
   </div>
   <div class="field">
-    <%= f.label :gender,'성별' %><br />
-    <%=f.radio_button :gender, 'female'%>
-    <%=f.label :gender_female, "여자"%>
-    <%=f.radio_button :gender, 'male'%>
-    <%=f.label :gender_male, "남자"%><br><br>
+    <%= f.label :gender,'Gender', style: "color: LightSteelBlue" %><br />
+    <%=f.radio_button :gender, 'female', style: "color: LightSteelBlue"%>
+    <%=f.label :gender_female, "Female"%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%=f.radio_button :gender, 'male', style: "color: LightSteelBlue"%>
+    <%=f.label :gender_male, "Male"%><br><br>
   </div>
   <div class="field">
-    <%= f.label :birthday,'생일' %><br/>
-    <%= f.text_field :birthday, :placeholder => 'ex)19961008'%><br><br>
+    <%= f.label :birthday,'Birthdate', style: "color: LightSteelBlue" %><br/>
+    <%= f.text_field :birthday, :placeholder => 'ex)19961008', style: "border: 1px solid white; background-color: white; opacity: 0.5; font-family:'Poiret One', 'Poor Story', cursive; font-size: 16px; padding: 4px; width: 220px; text-align: center; letter-spacing: 5px;"%><br><br>
   </div>
   <div class="actions">
-    <span id="submitbutton"><%= f.submit "Sign up" %></span>
-    <button><a href="/" id="cancelbutton">Cancel</a></button>
+    <span id="submitbutton"><%= f.submit "Sign up", style: "border: none; background-color: #3186b2; border-radius: 3px; opacity: 0.5; padding: 7px; font-family: 'Poiret One', 'Poor Story', cursive; font-size: 15px; cursor: pointer; color: LightSteelBlue" %></span>
+    <a href="/" id="cancelbutton">Cancel</a>
     </div>
 <% end %>
-
+<br><br>
 <%= render "devise/shared/links" %>
 </div>
 
-<%= stylesheet_link_tag "main" %>
-
+<%= stylesheet_link_tag "main"%>
+<br><br><br><br><br>
 </body>

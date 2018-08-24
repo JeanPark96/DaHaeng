@@ -8,5 +8,10 @@ response = RestClient::Request.execute :method => 'GET', :url => url , :headers 
 
 
 doc = Nokogiri::XML(response)
-@block = doc.css("items item countryEnName").map { |node| node.children.text }
-puts @block
+#@block = doc.css("items item countryEnName").map { |node| node.children.text }
+
+#puts @block
+
+doc.xpath("items/item/countryEnName").each do |node|
+    Safetyapi.create(:items => node.text)
+end

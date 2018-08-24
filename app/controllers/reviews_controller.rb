@@ -23,6 +23,7 @@ class ReviewsController < ApplicationController
        @review = Review.new(params[:review])
  
        @review.score = params[:review_score]
+       @review.country_id =params[:country_id]
        @review.title = params[:review_title]
        @review.content = params[:review_content]
        @review.date = params[:review_date]
@@ -41,7 +42,14 @@ class ReviewsController < ApplicationController
     end
     
     def review_params
-      params.require(:review).permit(:score, :title, :content, :date, :author)
+      params.require(:review).permit(:score, :country_id, :title, :content, :date, :author)
+    end
+    
+    def destroy
+        @review = Review.find(params[:id])
+        @review.destroy
+    
+        redirect_to reviews_path
     end
     
     

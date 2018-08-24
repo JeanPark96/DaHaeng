@@ -1,1 +1,3 @@
-여행
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+<%=pie_chart Review.group(:country_id).maximum(:country_id)%>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=v3j5OTNpK1zEj5sweTkG&submodules=geocoder"></script>

@@ -1,31 +1,57 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Poor+Story" rel="stylesheet">
 <style type="text/css">
   body{text-align: center;
+      background-image: url("/img/blur5.gif");
+      background-size: cover;
+    font-family: 'Poiret One', 'Poor Story', cursive;
   }
+  .login {
+      background-color: rgba(0, 0, 0, 0.4);
+      margin-left: 600px;
+      margin-right: 600px;
+      padding: 50px;
+      padding-top: 10px;
+  }
+  
+  h1 {text-align:center;
+color: snow;
+letter-spacing: 10px;
+text-shadow: 0 0 5px rgba(255, 255, 255, 1) , 
+            0 0 10px rgba(255, 255, 255, 1) , 
+            0 0 0px #ffffff , 0 0 0px #ffffff , 
+            0 0 0px #ffffff , 0 0 0px #ffffff;
+  font-size: 40px;
+}
 </style>
-<h2>Log in</h2>
-
-<body><%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div><br>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div><br>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div><br>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</head>
+<body>
+  <div class="login">
+    <h1>LOGIN</h1>
+    <hr><br>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email, style: "color: LightSteelBlue" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", style: "border: 1px solid white; background-color: white; opacity: 0.5; font-family:'Poiret One', 'Poor Story', cursive; font-size: 16px; padding: 4px; width: 220px; text-align: center; letter-spacing: 5px;" %>
+      </div><br>
+    
+      <div class="field">
+        <%= f.label :password, style: "color: LightSteelBlue" %><br />
+        <%= f.password_field :password, autocomplete: "off", style: "border: 1px solid white; background-color: white; opacity: 0.5; font-family:'Poiret One', 'Poor Story', cursive; font-size: 16px; padding: 4px; width: 220px; text-align: center; letter-spacing: 5px;"%>
+      </div><br>
+    
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, style: "color: snow"%>
+        </div><br>
+      <% end -%>
+    
+      <div class="actions">
+        <%= f.submit "Log in", style: "border: none; background-color: #35c2bd; border-radius: 3px; opacity: 0.5; padding: 7px; padding-top: 4px; padding-bottom: 4px;font-family: 'Poiret One', 'Poor Story', cursive; font-size: 15px; cursor: pointer; color: snow;" %>
+      </div>
+    <% end %>
+    <br>
+    <%= render "devise/shared/links"%>
+    </div>
 </body>

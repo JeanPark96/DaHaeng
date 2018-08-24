@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180813113552) do
+ActiveRecord::Schema.define(version: 20180824075143) do
+
+  create_table "langs", force: :cascade do |t|
+    t.string   "country"
+    t.integer  "score"
+    t.integer  "visit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -23,10 +31,25 @@ ActiveRecord::Schema.define(version: 20180813113552) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "score"
+    t.integer  "country_id"
     t.string   "title"
     t.string   "content"
     t.datetime "date"
     t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "safetyapis", force: :cascade do |t|
+    t.string   "items"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "togethers", force: :cascade do |t|
+    t.string   "title2"
+    t.datetime "date2"
+    t.string   "content2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,5 +75,13 @@ ActiveRecord::Schema.define(version: 20180813113552) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "vols", force: :cascade do |t|
+    t.string   "country"
+    t.integer  "score"
+    t.integer  "visit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

@@ -1,19 +1,25 @@
     <html>
       <head>
-            <style type ="text/css">
+        <style type ="text/css">
+            body {background-color: rgba(3, 89, 174, 0.5);
+            .table {
+                border-radius: 10px;
+                background-color: white;
+                text-align: center;
+                padding: 20px;
                 
-     </style>
+            }  
+            table {background-color: white;}
+        </style>
      </head>
     
-    </div>
-    
-    
-<%= link_to 'New Review', reviews_review_new_path %>
+<body>
+<%= link_to '리뷰 남기기', reviews_review_new_path %>
 
-    <table>
+    <table class="table">
   <tr>
     <th>Title</th>
- 
+    <th>id</th>
     <th>Content</th>
     <th>Date</th>
     <th>Author</th>
@@ -24,15 +30,19 @@
     <tr>
       
       <td><%= review.title %></td>
-
+      <td><%= review.country_id%></td>
       <td><%= review.content%></td>
       <td><%= review.date%></td>
       <td><%= review.author%></td>
       <td><%= review.score %></td>
+       <td><%= link_to 'Delete', reviews_path(review),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
       
     </tr>
   <% end %>
 </table>
+</body>
 
 
 

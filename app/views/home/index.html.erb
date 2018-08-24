@@ -3,6 +3,12 @@
 <html>
     
     <head>
+      <meta content="BlendTrans(Duration=0.2)" http-equiv="Page-Enter">
+<meta content="BlendTrans(Duration=0.2)" http-equiv="Page-exit">
+
+
+      <link href="https://fonts.googleapis.com/css?family=Poiret+One|Poor+Story" rel="stylesheet">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
@@ -23,68 +29,274 @@
         <link href="css/grayscale.css" rel="stylesheet">
         
         <style type="text/css">
-            body {background-image: url("img/sea1.jpg");}
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+            /*body {background-image: url("/img/sea1.jpg"); background-attachment: fixed;} */
+            body {background-color:#0359AE;
+              font-family: 'Poiret One', 'Poor Story', 'Hanna', '나눔고딕';
+            }
             #about {background-color: white;}
-            #logo {height: 80px; width: 135px;}
             .bu {
               border: none;
-              height: 200px; width: 200px;
-              background-clip: padding-box; 
-              border: 20px solid rgba(255, 255, 255, 0.4);
-              text-align: center;
-              font-size: 15px;
-              font-weight: bold;
+              height: 250px; width: 250px;
+              border: 20px solid #EBE5D9;
+              font-weight: 900;
+              font-family: '나눔고딕';
+              color: snow;
+  letter-spacing: 10px;
+  transition: ease-in 0.5s all;
+              
+
               }
-            #bu1 {background-image: url("img/lang.jpg"); background-size: contain; opacity: 0.8}
-            #bu2 {background-image: url("img/volun.jpg"); background-size: contain; opacity: 0.8}
-            #bu3 {background-image: url("img/trav.jpg"); background-size: contain; opacity: 0.8}
-            .bu:hover {border: 20px solid rgba(255, 255, 255, 0.8);}
-         
+            #bu1 {background-image: url("img/lang.jpg"); font-size: 32px; background-size: contain;}
+            #bu2 {background-image: url("img/volun.jpg"); font-size: 32px; background-size: contain;}
+            #bu3 {background-image: url("img/trav.jpg"); font-size: 32px; background-size: contain;position: relative; bottom: 30px; opacity: 0.}
+            .bu:hover {border: 20px solid rgba(255, 255, 255, 0.5); cursor: pointer;
+              text-shadow: 25px 25px 100px rgba(47,75,79,0.5); font-size: 30px;
+            }
+            .memo {background-color: #14B09B;
+                  border: 4px solid #14B09B;
+                  border-radius: 5px;
+                  position: relative;
+                  left: -50px;
+                  bottom: 20px;
+                  padding: 10px;
+            }
+
+            #title {
+                font-size: 110px;
+                background-color: rgba(0, 0, 0, 0.4);
+                margin-left: 200px;
+                margin-right: 200px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                letter-spacing: 20px;
+
+              }
+            #trav {
+              -webkit-animation: blink 0.01s infinite alternate;
+              -moz-animation: blink 0.01s infinite alternate;
+              -o-animation: blink 0.01s infinite alternate;
+              animation: blink 0.01s infinite alternate;
+            }
+            #fade {
+              opacity: 0.8;
+              color: #ebffff;
+              text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+              -webkit-animation: fade 3s infinite alternate;
+              -moz-animation: fade 3s infinite alternate;
+              -o-animation: fade 3s infinite alternate;
+              animation: fade 3s infinite alternate;
+            }
+            .neon-blue {
+              margin: 0 auto;
+              text-align: center;
+              color: #ebffff;
+              text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+            }
+            .neon-purple {
+              font-family: 'League Script', Helvetica, Arial, sans-serif;
+              font-size: 120px;
+              margin: 0 auto;
+              text-align: center;
+              color: #33cccc;
+              text-shadow: 2px 2px 1px rgba(0,0,0,0.5), 0 0 15px #fff, 0 0 10px #33cccc, 0 0 50px #33cccc;
+            }
+            @-moz-keyframes blink {
+              70% {
+                opacity: 0.7;
+              }
+            }
+            @-webkit-keyframes blink {
+              45% {
+                opacity: 0.5;
+              }
+            }
+            @-o-keyframes blink {
+              70% {
+                opacity: 0.7;
+              }
+            }
+            @keyframes blink {
+              70% {
+                opacity: 0.7;
+              }
+            }
+            @-moz-keyframes fade {
+              40% {
+                opacity: 0.8;
+              }
+              42% {
+                opacity: 0.1;
+              }
+              43% {
+                opacity: 0.8;
+              }
+              45% {
+                opacity: 0.1;
+              }
+              46% {
+                opacity: 0.8;
+              }
+            }
+            @-webkit-keyframes fade {
+              40% {
+                opacity: 0.8;
+              }
+              42% {
+                opacity: 0.1;
+              }
+              43% {
+                opacity: 0.8;
+              }
+              45% {
+                opacity: 0.1;
+              }
+              46% {
+                opacity: 0.8;
+              }
+            }
+            @-o-keyframes fade {
+              40% {
+                opacity: 0.8;
+              }
+              42% {
+                opacity: 0.1;
+              }
+              43% {
+                opacity: 0.8;
+              }
+              45% {
+                opacity: 0.1;
+              }
+              46% {
+                opacity: 0.8;
+              }
+            }
+            @keyframes fade {
+              40% {
+                opacity: 0.8;
+              }
+              42% {
+                opacity: 0.1;
+              }
+              43% {
+                opacity: 0.8;
+              }
+              45% {
+                opacity: 0.1;
+              }
+              46% {
+                opacity: 0.8;
+              }
+            }
+video { 
+    position: fixed;
+    top: 50%;
+    left: 90%;
+    min-width: 120%;
+    min-height: 110%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.arrow img {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  top: 100px;
+  -webkit-animation: arrow 1s both infinite;
+  animation: arrow 1s both infinite;
+  padding:0px;
+  margin-top: -80px;
+}
+
+@-webkit-keyframes arrow {
+    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+    }
+} 
+ 
+@keyframes arrow {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+} 
+
+#ex {background-color: #CC8A56;
+      margin-left: 100px; 
+      margin-right: 100px;
+      padding: 60px;
+      font-family: 'Poiret One', 'Poor Story', 'Hanna', '나눔고딕';
+
+}
         </style>
     </head>
-    
+  
     <body id="page-top">
-
-        <li class="nav-item">
-                      <%if user_signed_in?%>
-                        <%=current_user.email%>
-                        <%=link_to '로그아웃',destroy_user_session_path,method: 'delete'%>
-                      <%else%>
-                        <%=link_to '로그인',new_user_session_path%>
-                        <%=link_to '회원가입',new_user_registration_path %>
-                      <%end%>
-        </li>
+      <!-- video -->
+    <video poster="/img/sea1.jpg" id="bgvid" playsinline autoplay muted loop>
+<source src="http://thenewcode.com/assets/videos/lake.mp4" type="video/mp4">
+<source src="http://thenewcode.com/assets/videos/aotearoa.mp4" type="video/mp4">
+</video>
+      
         <!-- Header -->
         <header class="masthead">
-          <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center">
-              <br>
-              <h1 class="mx-auto my-0 text-uppercase">다음에도<br>행복하게</h1>
-              <h2 class="text-white-50 mx-auto mt-2 mb-5">당신의 안전한 여행을 위한 특별한 플렛폼<br><br>다음에도 행복하게, <span style="color: #165396">다행</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
-              <br>
-              <button OnClick=" location.href='/home/lang' " class="bu" id="bu1">교환학생/어학연수</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button OnClick=" location.href='/home/vol' "class="bu" id="bu2">해외봉사</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="container">
+  <div class="sign">
+    
+
+
+    <div class="neon-blue" id="title"><strong class="neon-purple">다</strong><span id="fade">음에도</span><br> <strong class="neon-purple">행</strong>복하게</div><br>
+      <div class="neon-blue"> 당신의 안전한 여행을 위한 특별한 플렛폼, 다음에도 행복하게, 다행 </span></div>
+   </div>
+</div> 
+  <div class="arrow">
+    <img src="http://marcelklacan.com/images/icon.png" alt="" />
+  </div>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+              <button class="memo"> 안전한 국가 순위를 보고싶다면?<br><strong>CLICK →</strong></button>
+              <button OnClick=" location.href='/home/lang' " class="bu" id="bu1">교환학생/어학연수</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button OnClick=" location.href='/home/vol' "class="bu" id="bu2">해외봉사</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button OnClick=" location.href='/home/trav' "class="bu" id="bu3">여행</button>
-              
-              
-              <br><br><br><br><br>
-            </div>
+<br><br><br><br><br><br><br><br><br><br>
           </div>
         </header>
-        
+        <br><br><br><br><br><br><br>
         <!-- About Section -->
         <section id="about" class="about-section text-center">
           <div class="container">
             <div class="row">
               <div class="col-lg-8 mx-auto">
-                <h2 style="color: black"><strong><span style="color:#93C8CC">다행</span>이란?</strong></h2><br><br>
-                <p style="color: black"> 당신의 여행은 기분 좋은 추억으로 남아있나요?<br>
+                <div id="ex">
+                <h2 style="color: black"><strong><span style="color:#EBE5D9">다행</span>이란?</strong></h2><br><br>
+                <p style="color: black; line-height: 2em;"> 당신의 여행은 기분 좋은 추억으로 남아있나요?<br>
                 다음 여행할 곳을 걱정한 적이 있나요?<br>
                 안전한 여행지를 추천하고, 추천받고 싶나요?<br><br>
                 당신의 여행이 이번에도, 다음에도 행복할 수 있도록<br>
-                특별한 안전여행 플랫폼, <strong style="color:#93C8CC">다 행</strong>
+                특별한 안전여행 플랫폼, <strong style="color:#EBE5D9">다 행</strong>
+                </div>
                 <br><br><br><br><br><br>
-                
+                <img src="/img/map.png" style="width:1000px; height: 600px; margin-left: -80px; margin-right: 10px;"></img>
               </div>
             </div>
           </div>
@@ -95,7 +307,7 @@
             <div class="container">
                 Copyright &copy; 다행 DaHaeng 2018<br>
                 상호명 다행 DaHaeng │ 대표 구본정 이시연 박혜리 정지윤│ 서울특별시 용산구 청파로47길 66(다행 DaHaeng)|
-                대표번호 010-1234-5678<br> 
+                대표번호 010-1234-5678<br>
                 다행은 안전한 여행을 위한 정보제공자이며 통신판매의 당사자가 아닙니다.<br>
                 따라서 다행은 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.
             </div>
@@ -113,5 +325,6 @@
         <script src="js/grayscale.js"></script>
         
         
+        <script type="text/javascript"></script>
     </body>
 </html>

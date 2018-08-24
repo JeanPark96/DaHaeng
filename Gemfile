@@ -5,6 +5,7 @@ gem 'rest-client'
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'devise'
+gem "chartkick"
 
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record

@@ -1,1 +1,5 @@
 어학연수/교환학생
+
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+<%=column_chart Lang.group(:country).maximum(:visit) %>
+<%=pie_chart Lang.group(:country).maximum(:score) %>
