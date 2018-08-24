@@ -32,3 +32,4 @@ vol=[
 vol.each do |country,score,visit|
   Vol.create(country: country, score: score, visit: visit)
 end
+

@@ -15,11 +15,12 @@ class ApiController < ApplicationController
         
         
         
-       doc.xpath("items/item/countryEnName").each do |node|
-        Safetyapi.create(:items => node.text)
+       #doc.xpath("items/item/countryEnName").each do |node|
+         #   Safetyapi.new(:items => node.text).save
+      # end
+       @block.each do |country|
+           Safetyapi.create(items: country)
        end
-       
-       
     end
     
 end

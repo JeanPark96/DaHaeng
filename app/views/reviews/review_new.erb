@@ -14,7 +14,7 @@
      </head>
 
     <center><h1><strong>Review</strong><br></h1> 
-    <%=form_for :review, url: {:action=>"create"} do |f| %> 
+    <%=form_for :review, url: {:action=>"create"}  do |f| %> 
  
           
          <p>
@@ -30,8 +30,8 @@
         
         <p><br>
             <%= f.label :country_id, "나라"%><br/><br>
-            <%= f.select :country_id, [["미국", 1], ["일본", 2], ["베트남", 3], ["말레이시아", 4], ["중국", 5],
-            ["영국", 6], ["프랑스",7], ["이탈리아",8], ["인도",9], ["핀란드", 10]],{}, {class: "form-control"} %>
+            <%= f.select :country_id, [["미국", "미국"], ["일본", "일본"], ["베트남", "베트남"], ["말레이시아", "말레이시아"], ["중국", "중국"],
+            ["영국", "영국"], ["프랑스","프랑스"], ["이탈리아","이탈리아"], ["인도","인도"], ["핀란드", "핀란드"]],{}, {class: "form-control"} %>
         </p> 
          
         <p>
@@ -49,9 +49,11 @@
             <%=f.label :date,"날짜"%><br/><br>
             <%= f.date_field :date%><br><br>
         </div>
-        <p><class="title">내용<br><br>
-        <textarea name="post_content" rows="20" cols="100" class="form-control3" id="exampleFormControlTextarea1"></textarea><br><br>
-        </p>
+        
+        <div class="title">내용<br><br>
+            <%=f.text_area :content ,:size=>'50'%><br><br>
+        </div>
+        
         <div class="actions">
             <%= f.submit "OK", class: 'button' %>
             <button id=1><a href="/">Cancel</button></a>

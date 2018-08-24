@@ -17,13 +17,18 @@ Rails.application.routes.draw do
 
   get '/reviews/review_create'
   get '/reviews/update'
+  # get '/reviews/destroy'
   get '/reviews' => 'reviews#index'
   get 'reviews/:id' => 'reviews#show'
- # get '/reviews/:id' => 'reviews#index'
-  get '/reviews/destroy' => 'reviews#destroy'
+  # get '/reviews/:id' => 'reviews#index'
+  # get '/reviews/:id' => 'reviews#destroy'
+  # get '/reviews/destroy' => 'reviews#destroy'
   get '/reviews/review_create' => 'reviews#create'
   post '/reviews/review_create' => 'reviews#create'
-  get 'reveiws/:id' => 'reviews#destroy'
+
+  get '/reviews/destroy/:id' => 'reviews#destroy'
+
+  # get '/reviews/:id' => 'reviews#destroy'
   get '/reviews/review' => 'reviews#index'
   post '/update' => 'reviews#update'
   get 'home/lang', to: 'home#lang'
@@ -31,7 +36,7 @@ Rails.application.routes.draw do
   get 'home/vol', to: 'home#vol'
   get 'home/profile', to: 'home#profile'
   get '/langs' => 'langs#index'
-
+  
 
   get '/togethers/together_new'
   

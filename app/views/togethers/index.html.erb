@@ -1,66 +1,220 @@
     <html>
         <head>
             <style type ="text/css">
-                body {background-image: url("img/bk.jpg");}
-                #submit {text-align: center;}
-                ul {
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0;
-                    overflow: hidden;
-                    background-color: pink;
+            @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+                body {
+                  background-image: url("/img/blur7.jpg")
+                }
+
+                .blog-card {
+                  max-width: 1000px;
+                  height: 400px;
+                  position: absolute;
+                  font-family: 'Droid Serif', serif;
+                  color:#fff;
+                  top: 20%;
+                  right: 0;  
+                  left: 0;
+                  margin: 0 auto;
+                  overflow: hidden;
+                  border-radius: 0px;
+                  box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.5);
+                  text-align: center;
+                  transition:all 0.4s;
+                  background: url(https://unsplash.it/600/800?image=1061) center no-repeat;
+                  background-size: 100%;
+                }
+                .blog-card a{ 
+                color:#fff;
+                  text-decoration:none;
+                  transition:all 0.2s
+                }
+                .blog-card .color-overlay {
+                  background: rgba(64, 84, 94,0.5);
+                  width: 1000px;
+                  height: 500px;
+                  position: absolute;
+                  z-index: 10;
+                  top: 0;
+                  left: 0;
+                  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+                }
+                .blog-card .gradient-overlay {  
+                  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 21%);
+                  width: 550px;
+                  height: 500px;
+                  position: absolute;
+                  top: 350px;
+                  left: 0;
+                  z-index: 15;
+                }
+                .blog-card:hover{
+                    box-shadow: 0px 18px 20px -9px rgba(0, 10, 30, 0.75);
+                }
+                .blog-card:hover .card-info {
+                  opacity: 1;
+                  bottom: 100px;
+                }
+                .blog-card:hover .color-overlay {
+                  background: rgba(64, 64, 70,0.8);
+                }
+                .blog-card:hover .title-content{
+                  margin-top:70px;
+                  opacity: 0;
+                }
+                .title-content {
+                  text-align: center;
+                  margin: 130px 0 0 0;
+                  position: absolute;
+                  z-index: 20;
+                  width: 100%;
+                  top: 0;
+                  left: 0;
+                  transition:all 0.6s
+                }
+                .title-content:hover {
+                    font-size: 0px;
+                }
+
+                .blog-card:hover h3:after{
+                 
+                  animation: changeLetter 0.3s 1 linear;
+                  width:80%
                 }
                 
-                li {
-                    float: left;
+                .blog-card h3,h1 {
+                  font-size: 1.9em;
+                  font-weight: 400;
+                  letter-spacing: 1px;
+                  font-family: 'Abril Fatface', serif;
+                  margin-bottom: 0;
+                  display:inline-block;
+                }
+                .blog-card h3 a{  
+                  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  
+                  transition:all 0.2s
+                }
+                .blog-card h3 a:hover{
+                  text-shadow: 0px 8px 20px rgba(0, 0, 0, 0.95);
+                }
+                h3:after {
+                  content: " ";
+                  display: block; 
+                  width: 10%;
+                  height: 2px;
+                  margin: 20px auto;
+                  border: 0;
+                  background: #BDA26B;
+                  transition:all 0.2s;
                 }
                 
-                li a, .dropbtn {
-                    display: inline-block;
-                    color: black;
+                
+                .card-info {
+                   box-sizing: border-box;
+                  padding: 0;
+                  width: 100%;
+                  position: absolute;
+                  bottom: -40px;
+                  left: 0;
+                  margin: 0 auto;
+                  padding: 0 50px;
+                  font-style: 16px;
+                  line-height: 24px;
+                  z-index: 20;
+                  opacity: 0;
+                  transition: bottom 0.64s, opacity 0.63s cubic-bezier(0.33, 0.66, 0.66, 1);
+                }
+                
+                .card-info a{
+                  display:block;
+                  width:100px;
+                  margin:15px auto;
+                  background:#fff;
+                  color:#444;
+                  padding:3px 10px;
+                  border-radius:2px;
+                  font-size:0.8em
+                }
+                .card-info a:hover{
+                  background: #8e7c49;
+                  color:#fff;
+                }
+                .card-info a:hover span{
+                   filter: brightness(10);
+                   opacity:1
+                }
+                
+                h1{
+                    font-size: 50px;
+                    font-family: 'Futura';
+                    color: #fff;
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
                     text-align: center;
-                    padding: 14px 16px;
                     text-decoration: none;
-                }
-                
-                li a:hover, .dropdown:hover .dropbtn {
-                    background-color: white;
-                }
-                
-                li.dropdown {
-                    display: inline-block;
-                }
-                
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color:#f9f9f9;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
-                }
-                
-                .dropdown-content a {
-                    color: black;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
+                    }
+                    #t {text-align: center;}
+                .tog {background-color: rgba(255, 255, 255, 0.5);
                     text-align: left;
+                    padding: 50px;
+                    margin-left: 400px;
+                    margin-right: 400px;
+                    margin-top: -150px;
+                    line-height: 2em;
                 }
-                
-                .dropdown-content a:hover {background-color:#FFFFFF}
-                
-                .dropdown:hover .dropdown-content {
-                    display: block;
+                #title, #date, #content {background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                    padding: 7px;
+                    padding-top: 1px;
+                    padding-bottom: 1px;
+                    margin-right: 562px;
+                    border-radius: 8px;
+                    font-family: 'Poiret One', 'Poor Story', 'Hanna', '나눔고딕';
                 }
-                .a {border: 2px solid gray;
-                margin: 10px;
-                text-align: center;
-                    width: 1000px;
-                }
+                #date {margin-right: 526px;}
+
+
             </style>
         </head>
-     
+        <body>
+            <div class="blog-card spring-fever">
+          <div class="title-content">
+            <h3><a href="#">주요 공지사항</a></h3>
+          </div>
+          <div class="card-info"><br><br>
+        1. 이 동행 모집은 함께 여행하고자 하는 여행자들을 도와 그들에게 편의를 제공할 목적으로 운영되고 있음.<br><br>
+        2. 다행의 역할은 단톡방을 개설해 동행의지가 있는 여행자들을 서로 연결해주고 동행에 도움이 되는 정보를 제공하는 것임.<br><br>
+        3. 단톡방의 대화와 실제 동행과정에 대해 다행은 일체관여하지 않으며 때문에 그 과정에서 발생하는 일에 책임을 지지 않음.<br><br>
+        4. 개인정보는 모집완료후 2개월이내에 삭제됨. <br><br>
+        5. 접수할 경우, 위의 내용들에 대해 모두 동의한 것으로 간주함. <br>          </div>
+          <div class="gradient-overlay"></div>
+          <div class="color-overlay"></div>
+        </div><!-- /.blog-card -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="t">
+        <a href="#tog"><h1>&#8659;</h1></a>
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+        <div id="tog">
+        <div class="tog">
+              <% @togethers.each do |together| %>
+
+               <div id="title">제목</div>&nbsp;&nbsp;&nbsp;<%= together.title2 %> <br>
+               <div id="date">작성 날짜</div>&nbsp;&nbsp;&nbsp;<%= together.date2%><br>
+               <div id="content">내용</div>&nbsp;&nbsp;&nbsp;<%= together.content2%><br><br><hr><br>
+               
+             <% end %>
+        <div style="text-align: center; background-color: yellow; margin-right: 250px; margin-left: 259px;
+        text-decoration: none; color: white;">
+            <%= link_to '동행구하기', togethers_together_new_path %>
+        </div>
+        </div>
+        
+        </div>
+        <br><br><br><br><br><br>
+
+<!--
+     <%= link_to 'New', togethers_together_new_path %>
 
     <div class="a">
      <h3>중요 공지사항</h3>
@@ -72,7 +226,6 @@
         5. 접수할 경우, 위의 내용들에 대해 모두 동의한 것으로 간주함. <br>
     </p>
 </div>
-
 
     <table class="table">
   <tr>
@@ -86,13 +239,10 @@
     <tr>
       
       <td><%= together.title2 %></td>
-  
       <td><%= together.content2%></td>
       <td><%= together.date2%></td>
-
-
-      
     </tr>
   <% end %>
 </table>
+-->
     </body>

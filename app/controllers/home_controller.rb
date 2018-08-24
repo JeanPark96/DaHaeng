@@ -14,15 +14,18 @@ class HomeController < ApplicationController
         user.name= params[:user_name]
         user.birthday = params[:user_birthday]
         user.gender = params[:user_gender]
+        user.useridentifier=params[:user_useridentifier]
         user.save
         
-        redirect_to '/home/safety'
+        redirect_to '/home/profile'
     end
     
     def new
         super
     end
-    
+    def trav
+        
+    end
     def there
     @rscore = params[:review_score]
     end

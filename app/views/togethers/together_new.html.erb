@@ -21,15 +21,18 @@
             <%=f.label :title2,"제목"%><br/><br>
             <%= f.text_field :title2, autofocus: true, autocomplete: "title",:placeholder => '제목'%><br><br>
         </p>
+        
         <p>
         <div class="field">
             <%=f.label :date2,"날짜"%><br/><br>
             <%= f.date_field :date2%><br><br>
         </div>
+      
         <p>
-            <%=f.label :content2,"내용"%><br/><br>
-            <%= f.text_field :content2, autofocus: true, autocomplete: "content",:placeholder => '내용'%><br><br>
+        <h1 class="title">내용</h1>
+            <%=f.text_area :content2 ,:size =>'50x50'%><br><br>
         </p>
+        </center>
        
         <div class="actions">
             <%= f.submit "OK", class: 'button' %>

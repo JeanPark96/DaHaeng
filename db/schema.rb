@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20180824075143) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "score"
-    t.integer  "country_id"
+    t.string   "country_id"
     t.string   "title"
     t.string   "content"
     t.datetime "date"
