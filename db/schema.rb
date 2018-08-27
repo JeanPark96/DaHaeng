@@ -41,9 +41,10 @@ ActiveRecord::Schema.define(version: 20180824075143) do
   end
 
   create_table "safetyapis", force: :cascade do |t|
-    t.string   "items"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "countryEnName"
+    t.integer  "val"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "togethers", force: :cascade do |t|

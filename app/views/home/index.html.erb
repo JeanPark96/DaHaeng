@@ -31,8 +31,8 @@
         <style type="text/css">
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
-            /*body {background-image: url("/img/sea1.jpg"); background-attachment: fixed;} */
-            body {background-color:#0359AE;
+            /*body {background-image: url("/img/sea2.gif"); background-attachment: fixed;} */
+            body {background-color: #0359AE ;
               font-family: 'Poiret One', 'Poor Story', 'Hanna', '나눔고딕';
             }
             #about {background-color: white;}
@@ -49,8 +49,8 @@
 
               }
             #bu1 {background-image: url("img/lang.jpg"); font-size: 32px; background-size: contain;position: relative}
-            #bu2 {background-image: url("img/volun.jpg"); font-size: 32px; background-size: contain; position: relative; bottom: 20px;}
-            #bu3 {background-image: url("img/trav.jpg"); font-size: 32px; background-size: contain;position: relative; bottom: 70px; opacity: 0.}
+            #bu2 {background-image: url("img/volun.jpg"); font-size: 32px; background-size: contain; position: relative; }
+            #bu3 {background-image: url("img/trav.jpg"); font-size: 32px; background-size: contain;position: relative; opacity: 0.}
             .bu:hover {border: 20px solid rgba(255, 255, 255, 0.5); cursor: pointer;
               text-shadow: 25px 25px 100px rgba(47,75,79,0.5); font-size: 30px;
             }
@@ -65,7 +65,7 @@
 
             #title {
                 font-size: 110px;
-                background-color: rgba(0, 0, 0, 0.4);
+                background-color: rgba(0, 0, 0, 0.2);
                 margin-left: 200px;
                 margin-right: 200px;
                 padding-top: 20px;
@@ -190,20 +190,20 @@
                 opacity: 0.8;
               }
             }
-video { 
+
+#i { 
     position: fixed;
     top: 50%;
-    min-width: 200%;
-    min-height: 110%;
+    min-width: 100%;
+    min-height: 100%;
     width: auto;
     height: auto;
     z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    transform: translateX(0%) translateY(-50%);
+ background: url('//demosthenes.info/as50sets/images/polina.jpg') no-repeat;
   background-size: cover;
   transition: 1s opacity;
 }
-
 .arrow img {
   position: relative;
   margin: 0 auto;
@@ -251,21 +251,21 @@ video {
   
     <body id="page-top">
       <!-- video -->
-    <video poster="/img/sea1.jpg" id="bgvid" playsinline autoplay muted loop>
+    <!--<video poster="/img/sea1.jpg" id="bgvid" playsinline autoplay muted loop>
 <source src="http://thenewcode.com/assets/videos/lake.mp4" type="video/mp4">
 <source src="http://thenewcode.com/assets/videos/aotearoa.mp4" type="video/mp4">
-</video>
+</video>-->
+<img src="/img/sea3.gif" id="i">
       
         <!-- Header -->
         <header class="masthead">
             <div class="mx-auto text-center">
               <div class="container">
   <div class="sign">
-    
-
 
     <div class="neon-blue" id="title"><strong class="neon-purple">다</strong><span id="fade">음에도</span><br> <strong class="neon-purple">행</strong>복하게</div><br>
-      <div class="neon-blue"> 당신의 안전한 여행을 위한 특별한 플렛폼, 다음에도 행복하게, 다행 </span></div>
+     <div class="neon-blue"> 당신의 안전한 여행을 위한 특별한 플렛폼, 다음에도 행복하게, 다행 </span></div>
+     
    </div>
 </div> 
   <div class="arrow">
@@ -274,7 +274,7 @@ video {
 
 <br><br><br><br><br><br><br><br><br><br><br>
               <button class="memo"> 안전한 국가 순위를 보고싶다면?<br><strong>CLICK →</strong></button>
-              <button OnClick=" location.href='/home/lang' " class="bu" id="bu1">교환학생/어학연수</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button OnClick=" location.href='/home/lang' " class="bu" id="bu1">교환/어학</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button OnClick=" location.href='/home/vol' "class="bu" id="bu2">해외봉사</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button OnClick=" location.href='/home/trav' "class="bu" id="bu3">여행</button>
 <br><br><br><br><br><br><br><br><br><br>

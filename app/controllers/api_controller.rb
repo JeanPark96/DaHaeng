@@ -19,7 +19,7 @@ class ApiController < ApplicationController
          #   Safetyapi.new(:items => node.text).save
       # end
        @block.each do |country|
-           Safetyapi.create(items: country)
+           Safetyapi.create!(:countryEnName => country.text)
        end
     end
     
